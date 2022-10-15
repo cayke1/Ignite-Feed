@@ -3,10 +3,14 @@ import "./styles/global.css";
 import styles from "./styles/App.module.css";
 
 import { Header } from "./components/Header";
-import { Post } from "./components/Post";
+import { Post, PostProps } from "./components/Post";
 import { Sidebar } from "./components/Sidebar";
 
-const posts = [
+interface Posts extends PostProps {
+  id: number;
+}
+
+const posts: Posts[] = [
   {
     id: 1,
     author: {
